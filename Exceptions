@@ -1,0 +1,36 @@
+package exception;
+
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+
+
+public class Exception {
+
+    public static void main(String[] args) {
+        
+        try{
+            Scanner input = new Scanner(System.in);
+
+            System.out.print("Enter number to divide: ");
+            double x = input.nextInt();
+
+            System.out.print("Enter number to divide by: ");
+            double y = input.nextInt();
+
+            double result = x/y;
+
+            System.out.printf("Result: " + result + "\n");
+            
+        } catch (ArithmeticException ex1){
+            System.out.println("Cannot divide by zero! >:(");
+        
+        } catch (InputMismatchException ex2){
+            System.out.println("Enter a number nga eh!! >:(");
+        } finally {
+            System.out.println("\nProgram terminated");
+        }
+        
+    }
+    
+}
