@@ -1,1 +1,42 @@
 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+package customexceptions;
+import java.util.Scanner;
+
+class AgeException extends Exception {
+    
+    AgeException (String message){
+        super(message);
+    
+    }
+}
+
+public class CustomExceptions {
+    
+    static void checkAge(int age) throws AgeException {
+        if (age < 18){
+            System.out.println("You must be +18 to sign up");
+            
+        
+        } else {
+            System.out.println("Signed up successfully");
+        
+        }
+    }
+
+    public static void main(String[] args) {
+        
+       Scanner input = new Scanner (System.in);
+       
+       System.out.print("Enter age: ");
+       int age = input.nextInt();
+       
+       
+       
+  
+        
+    }
+    
+}
+
+
